@@ -7,7 +7,7 @@ oursitex.Index = function () {
 
     _this.Id = "Index";
 
-    alert(_this.Id);
+    alert('Welcome to WEB 141......get ready!');
 
 
 }
