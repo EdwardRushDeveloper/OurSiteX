@@ -1,0 +1,96 @@
+﻿<!--The !doctype instruction, not a tage,  must be the first thing in the document and represents versioning information.-->
+<!--https://www.w3schools.com/tags/tag_doctype.asp-->
+<!doctype html>
+
+<!--https://www.w3schools.com/tags/tag_html.asp-->
+<!--This is a tag that tells the browser that this is an HTML document and is the root of all tags. It is the wrapper for all other tags.-->
+<!--BEGIN OUR HTML WRAPPER-->
+<html>
+
+<!--The head tag defines information about  document being loaded.-->
+<head>
+
+    <!--The Meta Tag is information about Information-->
+    <!--https://www.w3schools.com/tags/tag_meta.asp-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- This meta tag is important for you to provide mobile support for your webpage. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Our Title is what will be displayed on our tab or bar on the browser-->
+    <!--https://www.w3schools.com/tags/tag_title.asp-->
+    <title>OURSITE-X Platform</title>
+
+    <!--Our Link Tags tell the browser to download any files we have specified into memory to be used by the document-->
+    <!--Look in the CSS folder to see these files.-->
+    <!--https://www.w3schools.com/tags/tag_link.asp-->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--<link rel="stylesheet" href="css/mobile/alerts-fancy.css">
+    <link rel="stylesheet" href="css/mobile/layout.scss">
+    <link rel="stylesheet" href="css/mobile/mobile-nav-bar.scss">-->
+
+</head>
+<!--The body tag is exactly that, the Body of your display that you wish to present to the target audience.-->
+<!--https://www.w3schools.com/tags/tag_body.asp-->
+<body>
+
+    <div class="top-bar-container" data-sticky-container>
+        <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+            <div class="title-bar" data-responsive-toggle="MainMenu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="MainMenu"></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
+
+            <div class="top-bar" id="MainMenu">
+                <div class="top-bar-left">
+                    <ul class="dropdown vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" data-height="true" data-animate-height="true">
+                        <li class="menu-text">WEB 141</li>
+                        <li>
+                            <a href="#">Pages</a>
+                            <ul class="menu vertical">
+                                <li><a href="/pages/PageOne.htm" target="_blank">Page One</a></li>
+                                <li><a href="/pages/PageTwo.html" target="_blank">Page Two</a></li>
+                                <li><a href="/pages/PageThree.html" target="_blank">Page Three</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li><button type="button" class="button">X-Platform</button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--The script tag is the links to the code that runs on this site.-->
+    <!--CSS FRAMEWORK LINKS-->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/oursitex/oursitex.js"></script>
+    <script src="js/oursitex/index.js"></script>
+
+
+    <!--This is our starting point for our application. This is when all of our code will start executing
+    When the document files have all loaded, this will execute and this is automatically executed on your page-->
+    <script type="text/javascript">
+
+        var IndexPage = null;
+
+        $(document).ready(function () {
+            IndexPage = new oursitex.Index();
+        });
+
+    </script>
+</body>
+</html>
+<!--END OUR HTML WRAPPER-->
